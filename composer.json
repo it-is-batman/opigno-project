@@ -13,6 +13,19 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/calendar",
+                "version": "dev-1.x",
+                "type": "drupal-module",
+                "source": {
+                    "type": "git",
+                    "url": "https://git.drupal.org/project/calendar",
+                    "reference": "73e2979f3ed951b1fb3ad942e2d89d673aa52e1d"
+                }
+            }
         }
     ],
     "require": {

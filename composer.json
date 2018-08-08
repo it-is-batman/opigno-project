@@ -25,6 +25,9 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
+        "drupal/calendar": "1.x-dev#73e2979f3ed951b1fb3ad942e2d89d673aa52e1d",
+        "drupal/view_mode_selector": "1.x-dev#11c9ad2",
+        "drupal/views_role_based_global_text": "1.x-dev#550f8e0",
 	    "it-is-batman/opigno-lms": "dev-master"
     },
     "config": {

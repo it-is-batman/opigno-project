@@ -25,18 +25,10 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-		"it-is-batman/opigno-lms": "^1.0.0"
+	    "it-is-batman/opigno-lms": "^1.0.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-	"config": {
-		"sort-packages": true,
-		"preferred-install": {
-			"drupal/view_mode_selector": "source",
-			"drupal/views_role_based_global_text": "source",
-			"drupal/calendar": "source"
-		}
-	},
     "autoload": {
         "classmap": [
             "scripts/composer/ScriptHandler.php"

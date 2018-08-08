@@ -65,6 +65,7 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
-        }
+        },
+	"enable-patching": true
     }
 }

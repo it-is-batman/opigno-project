@@ -13,19 +13,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "drupal/calendar",
-                "version": "dev-1.x",
-                "type": "drupal-module",
-                "source": {
-                    "type": "git",
-                    "url": "https://git.drupal.org/project/calendar",
-                    "reference": "73e2979f3ed951b1fb3ad942e2d89d673aa52e1d"
-                }
-            }
         }
     ],
     "require": {
@@ -39,6 +26,14 @@
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
 	    "it-is-batman/opigno-lms": "^1.0.0"
+    },
+    "config": {
+        "preferred-install": {
+            "drupal/view_mode_selector": "source",
+            "drupal/views_role_based_global_text": "dist",
+            "drupal/calendar": "source",
+            "*": "dist"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

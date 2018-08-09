@@ -22,18 +22,48 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "8.5.6",
         "drush/drush": "^9.0.0",
-        "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "drupal/calendar": "1.x-dev#73e2979f3ed951b1fb3ad942e2d89d673aa52e1d",
         "drupal/view_mode_selector": "1.x-dev#11c9ad2",
         "drupal/views_role_based_global_text": "1.x-dev#550f8e0",
-	    "it-is-batman/opigno-lms": "dev-master"
+        "dompdf/dompdf": "0.8.0",
+        "rusticisoftware/tincan": "@stable",
+        "symfony/psr-http-message-bridge": "^1.0",
+        "drupal/commerce": "2.8",
+        "drupal/opigno_module": "1.0.0-beta2",
+        "drupal/opigno_calendar": "1.0.0-beta1",
+        "drupal/opigno_calendar_event": "1.0.0-beta1",
+        "drupal/opigno_catalog": "1.0.0-beta1",
+        "drupal/opigno_certificate": "1.0.0-beta1",
+        "drupal/opigno_class": "1.0.0-beta1",
+        "drupal/opigno_course": "1.0.0-beta1",
+        "drupal/opigno_dashboard": "1.0.0-beta1",
+        "drupal/opigno_group_manager": "1.0.0-beta1",
+        "drupal/opigno_learning_path": "1.0.0-beta1",
+        "drupal/opigno_messaging": "1.0.0-beta1",
+        "drupal/opigno_notification": "1.0.0-beta1",
+        "drupal/opigno_scorm": "1.0.0-beta1",
+        "drupal/tft": "1.0.0-beta1",
+        "drupal/better_exposed_filters": "3.0.0-alpha3",
+        "drupal/config_rewrite": "1.1",
+        "drupal/field_group": "1.0",
+        "drupal/h5p": "1.0.0-rc6",
+        "drupal/multiselect": "1.0",
+        "drupal/private_message": "1.0@beta",
+        "drupal/token": "1.1",
+        "drupal/token_filter": "1.0@beta",
+        "drupal/views_templates": "1.0.0-alpha1",
+        "drupal/entity_print": "2.0",
+        "drupal/group": "1.0.0-rc2",
+        "drupal/popup_field_group": "1.2",
+        "drupal/platon": "1.0.0-beta2",
+        "it-is-batman/opigno-lms": "^1.0.0"
     },
     "config": {
         "preferred-install": {
             "drupal/view_mode_selector": "source",
-            "drupal/views_role_based_global_text": "dist",
+            "drupal/views_role_based_global_text": "source",
             "drupal/calendar": "source",
             "*": "dist"
         }
@@ -72,6 +102,36 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/core": {
+                "2786577": "https://www.drupal.org/files/issues/2786577-270_0.patch",
+                "2924061": "https://www.drupal.org/files/issues/2018-04-06/2924061-10.patch",
+                "2898635": "https://www.drupal.org/files/issues/2018-04-20/views-code_bundle_fields-2898635-16.patch"
+            },
+            "drupal/views_role_based_global_text": {
+                "2969716": "https://www.drupal.org/files/issues/2018-05-04/2969716-Undefined-index-default.patch"
+            },
+            "drupal/calendar": {
+                "2756445": "https://www.drupal.org/files/issues/2756445-month-names-not-showing-10.patch",
+                "2699477": "https://www.drupal.org/files/issues/2018-04-06/calendar-date_range-2699477-71.patch",
+                "2604546": "https://www.drupal.org/files/issues/2018-05-09/2604546-33.patch",
+                "2630234": "https://www.drupal.org/files/issues/fix_menu_tabs_in-2630234-15.patch",
+                "2867991": "https://www.drupal.org/files/issues/tab_navigation_not_working_after_using_pager-2867991-5.patch",
+                "2901594": "https://www.drupal.org/files/issues/week-week-day-display-issues-2901594-15.patch",
+                "2955351": "https://www.drupal.org/files/issues/2018-04-23/2955351-5-base-filter.patch"
+            },
+            "drupal/entity_print": {
+                "2969184": "https://www.drupal.org/files/issues/2018-05-03/entity_print-dompdf-2969184.patch"
+            },
+            "drupal/group": {
+                "2736233": "https://www.drupal.org/files/issues/2018-04-20/2736233-156.patch",
+                "2973005": "https://www.drupal.org/files/issues/2018-05-15/group-2973005-2.patch"
+            },
+            "drupal/popup_field_group": {
+                "2965624": "https://www.drupal.org/files/issues/2018-04-24/popup_field_group-form_submit-2965624-2.patch",
+                "2971021": "https://www.drupal.org/files/issues/2018-05-07/popup_field_group-link_query-2971021-2.patch"
             }
         },
         "enable-patching": true

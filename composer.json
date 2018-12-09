@@ -1,5 +1,5 @@
 {
-    "name":         "it-is-batman/opigno-project",
+    "name":         "it-is-batman/opigno-composer",
     "description":  "Opigno LMS",
     "type":         "project",
     "license":      "GPL-2.0-or-later",
@@ -14,22 +14,54 @@
             "type": "composer",
             "url":  "https://packages.drupal.org/8"
         },
-		{
-            "type": "git",
-            "url": "https://github.com/it-is-batman/opigno-project.git"
+        {
+            "type": "package",
+            "package" : {
+                "name" :    "enyo/dropzone",
+                "version" : "v5.5.0",
+                "type" :    "drupal-library",
+                "source" : {
+                    "url" :         "https://github.com/enyo/dropzone.git",
+                    "type" :        "git",
+                    "reference" :   "origin/master"
+                }
+            }
         },
-		{
-            "type": "git",
-            "url": "https://github.com/it-is-batman/opigno-lms.git"
+        {
+            "type": "package",
+            "package": {
+                "name": "mozilla/pdf.js",
+                "version": "dev-master",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/mozilla/pdf.js",
+                    "type": "git",
+                    "reference": "origin/gh-pages"
+                }
+            }
         }
     ],
+    "require": {
+        "drupal/view_mode_selector":            "1.x-dev#11c9ad2",
+        "drupal/views_role_based_global_text":  "1.x-dev#550f8e0",
+        "drupal/calendar":                      "1.x-dev#73e2979",
+        "drupal/media_entity_browser":          "2.x-dev#c75921d",
+        "drupal/pdf":                           "1.x-dev#f558259",
+        "mozilla/pdf.js":                       "dev-master",
+        "enyo/dropzone":                        "^5.5",
+        "it-is-batman/opigno-lms":              "dev-master"
+    },
+    "require-dev": {
+        "drush/drush":      "^9.1",
+        "drupal/console":   "~1.0"
+    },
     "config": {
         "preferred-install": {
-            "drupal/calendar": "source"
+            "drupal/view_mode_selector":            "source",
+            "drupal/views_role_based_global_text":  "source",
+            "drupal/calendar":                      "source",
+            "*":                                    "dist"
         }
-    },
-    "require": {
-        "it-is-batman/opigno-lms":              "dev-master"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -60,6 +92,40 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}":   ["type:drupal-theme"],
             "drush/Commands/{$name}":       ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig":  "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/core": {
+                "2924061": "https://www.drupal.org/files/issues/2018-04-06/2924061-10.patch",
+                "2898635": "https://www.drupal.org/files/issues/2018-04-20/views-code_bundle_fields-2898635-16.patch"
+            },
+            "drupal/views_role_based_global_text": {
+                "2969716": "https://www.drupal.org/files/issues/2018-05-04/2969716-Undefined-index-default.patch"
+            },
+            "drupal/calendar": {
+                "2756445": "https://www.drupal.org/files/issues/2756445-month-names-not-showing-10.patch",
+                "2699477": "https://www.drupal.org/files/issues/2018-04-06/calendar-date_range-2699477-71.patch",
+                "2604546": "https://www.drupal.org/files/issues/2018-05-09/2604546-33.patch",
+                "2630234": "https://www.drupal.org/files/issues/fix_menu_tabs_in-2630234-15.patch",
+                "2867991": "https://www.drupal.org/files/issues/tab_navigation_not_working_after_using_pager-2867991-5.patch",
+                "2901594": "https://www.drupal.org/files/issues/week-week-day-display-issues-2901594-15.patch",
+                "2955351": "https://www.drupal.org/files/issues/2018-04-23/2955351-5-base-filter.patch"
+            },
+            "drupal/entity_print": {
+                "2969184": "https://www.drupal.org/files/issues/2018-05-03/entity_print-dompdf-2969184.patch"
+            },
+            "drupal/group": {
+                "2736233": "https://www.drupal.org/files/issues/2018-04-20/2736233-156.patch",
+                "2973005": "https://www.drupal.org/files/issues/2018-05-15/group-2973005-2.patch"
+            },
+            "drupal/private_message": {
+                "2961332": "https://www.drupal.org/files/issues/2018-07-03/private-message-2961332-2.0.patch"
+            }
         },
         "enable-patching": true
     }

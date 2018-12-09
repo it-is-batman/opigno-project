@@ -29,8 +29,6 @@
         }
     },
     "require": {
-        "composer/installers":                  "~1.0",
-        "drupal/pdf":                           "1.x-dev#f558259",
         "it-is-batman/opigno-lms":              "dev-master"
     },
     "minimum-stability": "dev",

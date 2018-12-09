@@ -23,6 +23,11 @@
             "url": "https://github.com/it-is-batman/opigno-lms.git"
         }
     ],
+    "config": {
+        "preferred-install": {
+            "drupal/calendar": "source"
+        }
+    },
     "require": {
         "composer/installers":                  "~1.0",
         "drupal/pdf":                           "1.x-dev#f558259",

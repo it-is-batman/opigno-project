@@ -27,9 +27,6 @@
         "drupal/pdf":                           "1.x-dev#f558259",
         "it-is-batman/opigno-lms":              "dev-master"
     },
-    "require-dev": {
-        "drush/drush":      "^9.1"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
@@ -59,6 +56,7 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}":   ["type:drupal-theme"],
             "drush/Commands/{$name}":       ["type:drupal-drush"]
-        }
+        },
+        "enable-patching": true
     }
 }

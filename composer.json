@@ -25,7 +25,7 @@
     ],
     "require": {
         "drupal/pdf":                           "1.x-dev#f558259",
-        "it-is-batman/opigno-lms":              "dev@master"
+        "it-is-batman/opigno-lms":              "dev-master"
     },
     "require-dev": {
         "drush/drush":      "^9.1"
